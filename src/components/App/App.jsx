@@ -10,7 +10,7 @@ export default function App() {
     <div className={styles.wholeContainer}>
       <h1 className={styles.book}>Phonebook</h1>
       <ContactForm />
-      <SearchBox message="No feedback given yet" />
+      <SearchBox />
       <ContactList contacts={contacts} />
     </div>
   );
