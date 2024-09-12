@@ -4,18 +4,24 @@ import { FaPhoneAlt } from "react-icons/fa";
 
 export default function Contact({ contact, handleDeleteContacts }) {
   return (
-    <>
-      <div className={styles.pers}>
-        <IoPersonSharp /> <p className={styles.contactName}>{contact.name}</p>
-        <FaPhoneAlt /> <p className={styles.contactNumber}>{contact.number}</p>
+    <div className={styles.contactLi}>
+      <div className={styles.nameNumbs}>
+        <div className={styles.nameNumb}>
+          <IoPersonSharp size="24" />{" "}
+          <p className={styles.contactName}>{contact.name}</p>
+        </div>
+        <div className={styles.nameNumb}>
+          <FaPhoneAlt size="24" />{" "}
+          <p className={styles.contactNumber}>{contact.number}</p>
+        </div>
       </div>
       <button
         onClick={() => handleDeleteContacts(contact.id)}
-        className={styles.addButton}
+        className={styles.deleteButton}
         type="submit"
       >
         Delete
       </button>
-    </>
+    </div>
   );
 }
