@@ -1,2 +1,27 @@
-.containerSearch {
+.contactContainer {
+  gap: 100px;
+}
+
+.contactContainer {
+  display: flex;
+  flex-direction: row;
+}
+
+.addButton {
+  font-size: 18px;
+}
+
+.contactName {
+  font-size: 14px;
+}
+
+.contactNumber {
+  font-size: 14px;
+}
+
+.pers {
+  display: flex;
+  flex-direction: column;
+}
+.contAndNumber {
 }
