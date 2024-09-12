@@ -1,6 +1,6 @@
 import styles from "./SearchBox.module.css";
 
-const SearchBox = () => {
+const SearchBox = ({ setValue }) => {
   return (
     <div>
       <form className={styles.searchBoxForm}>
@@ -10,6 +10,7 @@ const SearchBox = () => {
             className={styles.inputSearchboxForm}
             name="username"
             type="text"
+            onChange={(event) => setValue(event.target.value)}
           />
         </label>
       </form>
