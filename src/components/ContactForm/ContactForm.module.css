@@ -23,4 +23,13 @@
 
 .addButton {
   font-size: 20px;
+  border-radius: 8px;
+  background-color: aqua;
+  &:hover {
+    background-color: rgb(33, 192, 255);
+  }
+}
+
+.error {
+  color: red;
 }

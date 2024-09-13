@@ -10,6 +10,7 @@ const SearchBox = ({ setValue }) => {
           name="username"
           type="text"
           onChange={(event) => setValue(event.target.value)}
+          placeholder="Enter  your presumptive name"
         />
       </label>
     </div>
