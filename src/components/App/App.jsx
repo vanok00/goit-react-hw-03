@@ -19,8 +19,17 @@ export default function App() {
   const [searchValue, setSearchValue] = useState("");
 
   const filtredContacts = contacts.filter((contact) => {
-    return contact.name.toLowerCase().includes(searchValue.toLowerCase());
+    return (
+      contact.name &&
+      contact.name.toLowerCase().includes(searchValue.toLowerCase())
+    );
   });
+
+  const handleAddContacts = (newContact) => {
+    setContacts((prevContacts) => {
+      return [...prevContacts, newContact];
+    });
+  };
 
   const handleDeleteContacts = (contactId) => {
     setContacts((prevContacts) =>
@@ -35,7 +44,7 @@ export default function App() {
   return (
     <div>
       <h1 className={styles.book}>Phonebook</h1>
-      <ContactForm />
+      <ContactForm handleAddContacts={handleAddContacts} />
       <SearchBox setValue={setSearchValue} />
       <ContactList
         contacts={filtredContacts}
