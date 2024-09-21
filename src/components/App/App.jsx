@@ -45,7 +45,7 @@ export default function App() {
     <div>
       <h1 className={styles.book}>Phonebook</h1>
       <ContactForm handleAddContacts={handleAddContacts} />
-      <SearchBox setValue={setSearchValue} />
+      <SearchBox value={searchValue} setValue={setSearchValue} />
       <ContactList
         contacts={filtredContacts}
         handleDeleteContacts={handleDeleteContacts}
